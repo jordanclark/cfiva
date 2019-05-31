@@ -1,0 +1,39 @@
+{
+    "name":"cfiva",
+    "slug":"cfiva",
+    "version":"0.5.0",
+    "author":"Jordan Clark <jordanclark@gmail.com>",
+    "keywords":[
+        "iva",
+        "internetvideoarchive",
+        "cdn",
+        "api",
+        "rest"
+    ],
+    "shortDescription":"API client for InternetVideoArchive.com",
+    "type":"modules",
+    "location":"jordanclark/cfiva#v0.5.0",
+    "repository":{
+        "URL":"https://github.com/jordanclark/cfiva.git",
+        "type":"GIT"
+    },
+    "homepage":"https://github.com/jordanclark/cfiva",
+    "bugs":"https://github.com/jordanclark/cfiva/issues",
+    "license":[
+        {
+            "type":"Apache-2.0",
+            "URL":"https://github.com/jordanclark/cfiva/blob/master/LICENSE"
+        }
+    ],
+    "private":false,
+    "ignore":[
+        "**/.*",
+        "/test/",
+        "/tests/"
+    ],
+    "scripts":{
+        "postVersion":"package set location='jordanclark/cfiva#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push --follow-tags"
+    }
+}
