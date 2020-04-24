@@ -4,8 +4,9 @@ component {
 		required string appID
 	,	numeric throttle= 500
 	,	numeric httpTimeOut= 60
-	,	boolean debug= ( request.debug ?: false )
+	,	boolean debug
 	) {
+		arguments.debug = ( arguments.debug ?: request.debug ?: false );
 		this.appID = arguments.appID;
 		this.httpTimeOut = arguments.httpTimeOut;
 		this.throttle = arguments.throttle;
@@ -22,7 +23,12 @@ component {
 				request.log( arguments.input );
 			}
 		} else if( this.debug ) {
-			cftrace( text=( isSimpleValue( arguments.input ) ? arguments.input : "" ), var=arguments.input, category="IVA", type="information" );
+			var info= ( isSimpleValue( arguments.input ) ? arguments.input : serializeJson( arguments.input ) );
+			cftrace(
+				var= "info"
+			,	category= "IVA"
+			,	type= "information"
+			);
 		}
 		return;
 	}
