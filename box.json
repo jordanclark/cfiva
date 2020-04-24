@@ -1,7 +1,7 @@
 {
     "name":"cfiva",
     "slug":"cfiva",
-    "version":"0.5.4",
+    "version":"0.5.5",
     "author":"Jordan Clark <jordanclark@gmail.com>",
     "keywords":[
         "iva",
@@ -12,7 +12,7 @@
     ],
     "shortDescription":"API client for InternetVideoArchive.com",
     "type":"modules",
-    "location":"jordanclark/cfiva#v0.5.4",
+    "location":"jordanclark/cfiva#v0.5.5",
     "repository":{
         "URL":"https://github.com/jordanclark/cfiva.git",
         "type":"GIT"
